@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        data = [{
+            height: 10
+        }, {
+            height: 10
+        }, {
+            height: 10
+        }, {
+            height: 10
+        }]
+
+        var newArr = [];
+        data.forEach((item, index) => {
+            newArr.push(item.height)
+        })
+        for (var i = 1; i < data.length; i++) {
+            for (var j = 0; j < i; j++) {
+                data[i].height += newArr[j];
+            }
+        }
+        console.log(data)
+    </script>
+</body>
+
+</html>
